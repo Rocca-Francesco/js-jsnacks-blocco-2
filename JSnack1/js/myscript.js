@@ -6,15 +6,17 @@ numSendEl.addEventListener(
     "click",
     function () {
         // assegno un valore al numero inserito
-        const numUserEl = document.getElementById("numUser").value;
+        let numUserEl = document.getElementById("numUser").value;
         // controllo che il valore inserito sia un numero
         if (isNaN(numUserEl)) {
             alert("Inserire dei numeri.");
         } else if (numUserEl % 2 == 0) {
             // controllo che il numero inserito sia pari
-            document.getElementById("numResult").innerHTML = "Il tuo numero è pari!";
+            document.getElementById("numResult").innerHTML = "Il tuo numero pari è " + numUserEl + "!";
         } else {
-            document.getElementById("numResult").innerHTML = "Il tuo numero è dispari!";
+            numUserEl++;
+            console.log(numUserEl);
+            document.getElementById("numResult").innerHTML = "Il tuo numero ora è " + numUserEl + ", ti ho detto che mi piacciono solo i numeri pari!";
         }
     }
 )
