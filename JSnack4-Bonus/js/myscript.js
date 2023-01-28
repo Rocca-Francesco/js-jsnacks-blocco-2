@@ -2,6 +2,7 @@
 // dichiaro i miei array di numeri casuali
 let randomFirst = [];
 let randomSecond = [];
+console.log(randomFirst.length, randomSecond.length);
 
 // assegno un valore al mio bottone per generare e un evento
 const generaEl = document.getElementById("genera");
@@ -58,10 +59,9 @@ fixaEl.addEventListener(
     "click",
     function () {
         // creo una variabile per la lunghezza finale da usare a fini di visualizzazione
-        let maxLenght;
-
+        let maxLength;
         // confronto i due array
-        if (randomFirst.length < randomSecond.lenght) {
+        if (randomFirst.length < randomSecond.length) {
             // trovo la differenza
             const totRepair = randomSecond.lenght - randomFirst.length;
             // aggiungo elementi finchè i due array non sono uguali
@@ -74,11 +74,11 @@ fixaEl.addEventListener(
                 randomFirst.push(numRandom);
 
                 // salvo la lunghezza massima generata a fini di visualizzazione
-                maxLenght = randomSecond.lenght;
+                maxLength = randomSecond.lenght;
             }
-        } else if (randomSecond.lenght < randomFirst.length) {
+        } else if (randomSecond.length < randomFirst.length) {
             // trovo la differenza
-            const totRepair = randomFirst.length - randomSecond.lenght;
+            const totRepair = randomFirst.length - randomSecond.length;
             // aggiungo elementi finchè i due array non sono uguali
             for (let i = 0; i < totRepair; i++) {
 
@@ -89,12 +89,12 @@ fixaEl.addEventListener(
                 randomSecond.push(numRandom);
 
                 // salvo la lunghezza massima generata a fini di visualizzazione
-                maxLenght = randomFirst.length;
+                maxLength = randomFirst.length;
             }
         };
 
         // stampo gli array finali
-        document.getElementById("arrayFirstFinal").innerHTML = "Ciao, siamo i tuoi nuovi array! E ora abbiamo entrambi " + maxLenght + " elementi. <br>Io sono il primo e ora contengo: " + randomFirst + ".";
+        document.getElementById("arrayFirstFinal").innerHTML = "Ciao, siamo i tuoi nuovi array! E ora abbiamo entrambi " + maxLength + " elementi. <br>Io sono il primo e ora contengo: " + randomFirst + ".";
         document.getElementById("arraySecondFinal").innerHTML = "Io sono il secondo e ora contengo: " + randomSecond + ".";
     }
 );
