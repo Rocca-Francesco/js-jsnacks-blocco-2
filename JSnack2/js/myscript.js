@@ -1,3 +1,4 @@
+// assegno un valore al mio bottone per generare e un evento
 const generaEl = document.getElementById("genera");
 
 generaEl.addEventListener(
