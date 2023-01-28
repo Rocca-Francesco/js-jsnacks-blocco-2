@@ -2,7 +2,6 @@
 // dichiaro i miei array di numeri casuali
 let randomFirst = [];
 let randomSecond = [];
-console.log(randomFirst.length, randomSecond.length);
 
 // assegno un valore al mio bottone per generare e un evento
 const generaEl = document.getElementById("genera");
@@ -14,6 +13,7 @@ generaEl.addEventListener(
         if (randomFirst.length != 0 || randomSecond.length != 0) {
             randomFirst = [];
             randomSecond = [];
+            console.log(randomFirst.length, randomSecond.length);
         }
 
         // scelgo la quantità di numeri da stampare
@@ -63,7 +63,7 @@ fixaEl.addEventListener(
         // confronto i due array
         if (randomFirst.length < randomSecond.length) {
             // trovo la differenza
-            const totRepair = randomSecond.lenght - randomFirst.length;
+            const totRepair = randomSecond.length - randomFirst.length;
             // aggiungo elementi finchè i due array non sono uguali
             for (let i = 0; i < totRepair; i++) {
 
@@ -74,7 +74,7 @@ fixaEl.addEventListener(
                 randomFirst.push(numRandom);
 
                 // salvo la lunghezza massima generata a fini di visualizzazione
-                maxLength = randomSecond.lenght;
+                maxLength = randomSecond.length;
             }
         } else if (randomSecond.length < randomFirst.length) {
             // trovo la differenza
