@@ -11,7 +11,7 @@ generaEl.addEventListener(
         const numTot = Math.floor((Math.random() * 30) + 1);
 
         // genero dei numeri casuali e li aggiungo al mio array, finchè la quantità di numeri non è uguale a quella che devo avere, generata in precedenza
-        for (i = 0; i < numTot; i++) {
+        for (let i = 0; i < numTot; i++) {
             let numRandom = Math.floor((Math.random() * 100) + 1);
             numList.push(numRandom);
         };
@@ -21,7 +21,7 @@ generaEl.addEventListener(
         let pariList = [];
 
         // per ogni numero generato, scelgo se è pari o dispari e lo divido negli array rispettivi
-        for (i = 0; i < numList.length; i++) {
+        for (let i = 0; i < numList.length; i++) {
             if (numList[i] % 2 == 0) {
                 pariList.push(numList[i]);
             } else {
